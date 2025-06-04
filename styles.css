@@ -48,7 +48,7 @@ body {
 
 #webname {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .menu-toggle {
@@ -100,6 +100,12 @@ body {
   .navbar {
     padding: 0.8rem 1rem; /* Slightly reduced padding for mobile */
   }
+    #webname {
+    font-size: 18px;
+  }
+  .d-block {
+    font-size: 15px;
+  }
 
   .menu-toggle {
     display: flex;
@@ -121,10 +127,10 @@ body {
 }
 @media (max-width: 400px) {
   #webname {
-    font-size: 15px;
+    font-size: 12px;
   }
   .d-block {
-    font-size: 10px;
+    font-size: 7px;
   }
   .navbar-logo img {
     height: 32px;
