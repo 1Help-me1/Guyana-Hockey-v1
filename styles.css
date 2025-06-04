@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-image: url("./images/fieldo.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden; /* Blocks horizontal scrollbar */
+  width: 100%; /* Ensures body doesn't exceed viewport */
+}
+
+/*Section 1 Navbar*/
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 50px 2px 50px;
+  flex-wrap: wrap;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* ensures it stays on top of other content */
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+#webname {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  background: red;
+  height: 3px;
+  width: 20px;
+  margin: 4px 0;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  /* font-weight: bold; */
+  padding-bottom: 5px;
+}
+.navbar-links a:hover {
+  color: red;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-links a:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+    padding: 0.8rem 1rem; /* Slightly reduced padding for mobile */
+  }
+
+  
+  .menu-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+        order: 3; /* Menu appears below */
+    display: none;
+    width: 100%;
+    background-color: white;
+    padding: 1rem 0;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+  
+}
+ @media (max-width: 400px) {
+    #webname {
+      font-size: 18px;
+    }
+    .navbar-logo img {
+      height: 32px;
+      width: 20px;
+    }
+  }
