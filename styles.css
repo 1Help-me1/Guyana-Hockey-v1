@@ -121,7 +121,10 @@ body {
 }
 @media (max-width: 400px) {
   #webname {
-    font-size: 18px;
+    font-size: 15px;
+  }
+  .d-block {
+    font-size: 10px;
   }
   .navbar-logo img {
     height: 32px;
