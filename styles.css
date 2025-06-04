@@ -48,7 +48,7 @@ body {
 
 #webname {
   font-weight: bold;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .menu-toggle {
@@ -96,19 +96,17 @@ body {
   width: 100%;
 }
 
-
 @media (max-width: 768px) {
-    .navbar {
+  .navbar {
     padding: 0.8rem 1rem; /* Slightly reduced padding for mobile */
   }
 
-  
   .menu-toggle {
     display: flex;
   }
 
   .navbar-links {
-        order: 3; /* Menu appears below */
+    order: 3; /* Menu appears below */
     display: none;
     width: 100%;
     background-color: white;
@@ -120,14 +118,13 @@ body {
   .navbar-links.active {
     display: flex;
   }
-  
 }
- @media (max-width: 400px) {
-    #webname {
-      font-size: 18px;
-    }
-    .navbar-logo img {
-      height: 32px;
-      width: 20px;
-    }
+@media (max-width: 400px) {
+  #webname {
+    font-size: 18px;
   }
+  .navbar-logo img {
+    height: 32px;
+    width: 20px;
+  }
+}
