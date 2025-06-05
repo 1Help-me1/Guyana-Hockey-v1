@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: Arial, sans-serif;
-  /* background-image: url("./images/fieldo.png"); */
-  background-color: rgb(0, 0, 0);
+  background-image: url('./images/fieldo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -9,17 +14,15 @@ body {
   width: 100%; /* Ensures body doesn't exceed viewport */
 }
 
+
 /*Section 1 Navbar*/
 .navbar {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  background-color: white;
-  color: black;
+  background-color: #000;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 50px 2px 50px;
+  padding: 1rem;
   flex-wrap: wrap;
   border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -41,10 +44,8 @@ body {
   margin-right: 10px;
 }
 
-#webname {
-  font-weight: bold;
-  font-size: 24px;
-  margin-left: 1rem;
+#webname{
+    font-weight: bold;
 }
 
 .menu-toggle {
@@ -54,7 +55,7 @@ body {
 }
 
 .menu-toggle span {
-  background: red;
+  background: white;
   height: 3px;
   width: 25px;
   margin: 4px 0;
@@ -67,48 +68,33 @@ body {
 
 .navbar-links a {
   position: relative;
-  color: black;
+  color: white;
   text-decoration: none;
   /* font-weight: bold; */
-  padding-bottom: 5px;
+  padding-bottom: 4px;
 }
 .navbar-links a:hover {
-  color: red;
+  color: aqua;
 }
 
 .navbar-links a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
-  right: 100%;
+  left: 100%;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: white;
   transition: all 0.3s ease-in-out;
 }
 
 .navbar-links a:hover::after {
   left: 0;
   width: 100%;
+
 }
 
 /*section 2 Carousel*/
-.greeting {
-  /* display: flex; */
-  font-family: "Montserrat", sans-serif;
-  /* font-size: 3rem; */
-  /* justify-content: center; */
-  text-align: center;
-  align-items: center;
-  color: white;
-  margin-top: 4rem;
-  padding-top: 1rem;
-
-}
-.download-button {
-  margin: 5% 3% 5% 0%;
-}
-
 .carousel-container {
   width: 100%;
   max-width: 800px;
@@ -189,44 +175,154 @@ body {
   background-color: white;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0.8rem 1rem; /* Slightly reduced padding for mobile */
-  }
-  #webname {
-    font-size: 18px;
-  }
-  .d-block {
-    font-size: 15px;
-  }
+/*Club statistics*/
+#statistics{
+    background-color: white;
+    position: relative;
+    
+}
 
+.container-fluid{
+    padding:3% 15% 7%;
+}
+
+.statistics-container{
+    padding:7% 10%;
+    margin-left: 10px;
+   
+    
+}
+
+
+.bg-blue {
+    background-color: #0d6efd; 
+}
+
+.bg-black {
+    background-color: #212529; 
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white; 
+    padding: 20px;
+}
+
+/*Player cards*/
+.player-card {
+    transition: transform 0.3s;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.player-card:hover {
+    transform: translateY(-5px);
+}
+.player-img {
+    height: 250px;
+    object-fit: cover;
+    object-position: top;
+}
+.card-body {
+    padding: 1.5rem;
+}
+.position-tag {
+    background-color: #0d6efd;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.stats {
+    border-top: 1px solid #eee;
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+}
+
+.view-all-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.view-all-btn:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+/*MATCH RESULTS*/
+.match-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 25px;
+
+}
+.match-card:hover {
+    transform: translateY(-5px);
+}
+.team-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+.score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+.match-date {
+    background-color: #f8f9fa;
+    padding: 8px 15px;
+    font-weight: 600;
+}
+.match-details {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    
+}
+.badge-penalty {
+    background-color: #dc3545;
+    color: white;
+}
+.badge-win {
+    background-color: #198754;
+    color: white;
+}
+.badge-loss {
+    background-color: #6c757d;
+    color: white;
+}
+.badge-draw {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+
+@media (max-width: 768px) {
   .menu-toggle {
     display: flex;
   }
 
   .navbar-links {
-    order: 3; /* Menu appears below */
     display: none;
+    flex-direction: column;
     width: 100%;
-    background-color: white;
-    padding: 1rem 0;
-    margin-top: 0.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
   }
 
   .navbar-links.active {
     display: flex;
-  }
-}
-@media (max-width: 400px) {
-  #webname {
-    font-size: 12px;
-  }
-  .d-block {
-    font-size: 7px;
-  }
-  .navbar-logo img {
-    height: 32px;
-    width: 20px;
   }
 }
